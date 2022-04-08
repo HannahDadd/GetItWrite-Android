@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1057665992335",
+    "project_id": "getitwrite-9a7ae",
+    "storage_bucket": "getitwrite-9a7ae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057665992335:android:ac9ce036e747c8a55012fa",
+        "android_client_info": {
+          "package_name": "com.example.getitwrite"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057665992335-ddtar6k0kcne6nv3fgf7cphvnmolo7d6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpQrag-M1b8ZA1jjJuJGXAGOLl6i1avFQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057665992335-ddtar6k0kcne6nv3fgf7cphvnmolo7d6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1057665992335-nn7c27c2j723evp9djvjmtm1ugg0aus7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "hannah.GetItWrite"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

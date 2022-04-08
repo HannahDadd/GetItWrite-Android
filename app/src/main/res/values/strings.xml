@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">GetItWrite</string>
+    <string name="title_activity_login_view">LoginView</string>
+</resources>
