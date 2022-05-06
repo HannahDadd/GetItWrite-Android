@@ -27,7 +27,7 @@ fun showCreateAccountView() {
     var password = remember { mutableStateOf("") }
     Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(20.dp)) {
         Image(painter = painterResource(id = R.drawable.sitting), modifier = Modifier.fillMaxWidth(), contentDescription = "", contentScale = ContentScale.FillWidth)
-        Text("Login", fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        Text("Create Account", fontSize = 40.sp, fontWeight = FontWeight.Bold)
         Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
             TextField(
                 value = email.value,
