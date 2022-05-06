@@ -1,4 +1,4 @@
-package com.example.getitwrite.views
+package com.example.getitwrite.views.login
 
 import android.graphics.Paint
 import androidx.compose.foundation.Image
@@ -21,9 +21,6 @@ import androidx.compose.ui.unit.sp
 import com.example.getitwrite.R
 import androidx.compose.ui.layout.ContentScale
 
-
-
-
 @Composable
 fun showLogin() {
     var email = remember { mutableStateOf("") }
@@ -36,14 +33,16 @@ fun showLogin() {
                 value = email.value,
                 maxLines = 1,
                 onValueChange = { email.value = it },
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                label = { Text(text = "Email") }
             )
             TextField(
                 value = password.value,
                 maxLines = 1,
                 onValueChange = { password.value = it },
                 visualTransformation = PasswordVisualTransformation(),
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier.fillMaxWidth(),
+                label = { Text(text = "Password") }
             )
             TextButton(onClick = {/**/}) {
                 Text("Forgot Password?", color = Colours.Dark_Readable, fontWeight = FontWeight.Bold, textAlign = TextAlign.End)
@@ -57,7 +56,8 @@ fun showLogin() {
             Text("LOGIN", Modifier.padding(10.dp), fontWeight = FontWeight.Bold)
         }
         TextButton(onClick = {/**/}) {
-            Text("Don't have an account? Sign Up", color = Colours.Dark_Readable, fontWeight = FontWeight.Bold)
+            Text(modifier = Modifier.align(Alignment.Bottom),
+                text = "Don't have an account? Sign Up", color = Colours.Dark_Readable, fontWeight = FontWeight.Bold)
         }
     }
 }
