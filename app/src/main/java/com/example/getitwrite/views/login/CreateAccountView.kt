@@ -23,18 +23,18 @@ import com.example.getitwrite.R
 
 @Composable
 fun showCreateAccountView() {
-    var email = remember { mutableStateOf("") }
+    var displayName = remember { mutableStateOf("") }
     var password = remember { mutableStateOf("") }
     Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        Image(painter = painterResource(id = R.drawable.sitting), modifier = Modifier.fillMaxWidth(), contentDescription = "", contentScale = ContentScale.FillWidth)
-        Text("Create Account", fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        Image(painter = painterResource(id = R.drawable.lounging), modifier = Modifier.fillMaxWidth(), contentDescription = "", contentScale = ContentScale.FillWidth)
+        Text("Setup Profile", fontSize = 40.sp, fontWeight = FontWeight.Bold)
         Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
             TextField(
-                value = email.value,
+                value = displayName.value,
                 maxLines = 1,
-                onValueChange = { email.value = it },
+                onValueChange = { displayName.value = it },
                 modifier = Modifier.fillMaxWidth(),
-                label = { Text(text = "Email") }
+                label = { Text(text = "Display Name") }
             )
             TextField(
                 value = password.value,
