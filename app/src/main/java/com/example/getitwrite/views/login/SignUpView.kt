@@ -22,12 +22,13 @@ import androidx.compose.ui.unit.sp
 import com.example.getitwrite.R
 
 @Composable
-fun showCreateAccountView() {
+fun showSignUp() {
     var email = remember { mutableStateOf("") }
     var password = remember { mutableStateOf("") }
+    var confirmPassword = remember { mutableStateOf("") }
     Column(modifier = Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        Image(painter = painterResource(id = R.drawable.sitting), modifier = Modifier.fillMaxWidth(), contentDescription = "", contentScale = ContentScale.FillWidth)
-        Text("Login", fontSize = 40.sp, fontWeight = FontWeight.Bold)
+        Image(painter = painterResource(id = R.drawable.building), modifier = Modifier.fillMaxWidth(), contentDescription = "", contentScale = ContentScale.FillWidth)
+        Text("Sign Up", fontSize = 40.sp, fontWeight = FontWeight.Bold)
         Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
             TextField(
                 value = email.value,
@@ -40,24 +41,23 @@ fun showCreateAccountView() {
                 value = password.value,
                 maxLines = 1,
                 onValueChange = { password.value = it },
-                visualTransformation = PasswordVisualTransformation(),
                 modifier = Modifier.fillMaxWidth(),
                 label = { Text(text = "Password") }
             )
-            TextButton(onClick = {/**/}) {
-                Text("Forgot Password?", color = Colours.Dark_Readable, fontWeight = FontWeight.Bold, textAlign = TextAlign.End)
-            }
+            TextField(
+                value = confirmPassword.value,
+                maxLines = 1,
+                onValueChange = { confirmPassword.value = it },
+                modifier = Modifier.fillMaxWidth(),
+                label = { Text(text = "Password") }
+            )
         }
         Button(
             modifier = Modifier.fillMaxWidth(),
             onClick = { /* ... */ },
             colors = ButtonDefaults.buttonColors(backgroundColor = Colours.Dark_Readable, contentColor = Color.White)
         ) {
-            Text("LOGIN", Modifier.padding(10.dp), fontWeight = FontWeight.Bold)
-        }
-        TextButton(onClick = {/**/}) {
-            Text(modifier = Modifier.align(Alignment.Bottom),
-                text = "Don't have an account? Sign Up", color = Colours.Dark_Readable, fontWeight = FontWeight.Bold)
+            Text("SIGN UP", Modifier.padding(10.dp), fontWeight = FontWeight.Bold)
         }
     }
 }

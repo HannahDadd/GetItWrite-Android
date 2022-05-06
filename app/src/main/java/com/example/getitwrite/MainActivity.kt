@@ -3,15 +3,14 @@ package com.example.getitwrite
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
 import com.example.getitwrite.ui.theme.GetItWriteTheme
-import com.example.getitwrite.views.showLogin
+import com.example.getitwrite.views.login.showLogin
+import com.example.getitwrite.views.login.showSignUp
 
 class MainActivity : ComponentActivity() {
 
@@ -20,11 +19,24 @@ class MainActivity : ComponentActivity() {
 //        FirebaseSession session = FirebaseSession()
 //        auth = FirebaseAuth.getInstance()
         setContent {
+            val navController = rememberNavController()
             GetItWriteTheme {
-                // A surface container using the 'background' color from the theme
-                Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colors.background) {
-                    showLogin()
-                }
+                NavigationComponent(navController)
+            }
+        }
+    }
+
+    @Composable
+    fun NavigationComponent(navController: NavHostController) {
+        NavHost(
+            navController = navController,
+            startDestination = "login"
+        ) {
+            composable("login") {
+                showLogin(navController)
+            }
+            composable("signup") {
+                showSignUp()
             }
         }
     }
