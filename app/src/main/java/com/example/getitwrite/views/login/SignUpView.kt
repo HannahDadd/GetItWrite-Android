@@ -32,21 +32,21 @@ fun showSignUp(navController: NavController) {
         Image(painter = painterResource(id = R.drawable.building), modifier = Modifier.fillMaxWidth(), contentDescription = "", contentScale = ContentScale.FillWidth)
         Text("Sign Up", fontSize = 40.sp, fontWeight = FontWeight.Bold)
         Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
-            TextField(
+            OutlinedTextField(
                 value = email.value,
                 maxLines = 1,
                 onValueChange = { email.value = it },
                 modifier = Modifier.fillMaxWidth(),
                 label = { Text(text = "Email") }
             )
-            TextField(
+            OutlinedTextField(
                 value = password.value,
                 maxLines = 1,
                 onValueChange = { password.value = it },
                 modifier = Modifier.fillMaxWidth(),
                 label = { Text(text = "Password") }
             )
-            TextField(
+            OutlinedTextField(
                 value = confirmPassword.value,
                 maxLines = 1,
                 onValueChange = { confirmPassword.value = it },

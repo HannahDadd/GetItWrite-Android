@@ -27,14 +27,14 @@ fun showLogin(navController: NavController) {
         Image(painter = painterResource(id = R.drawable.sitting), modifier = Modifier.fillMaxWidth(), contentDescription = "", contentScale = ContentScale.FillWidth)
         Text("Login", fontSize = 40.sp, fontWeight = FontWeight.Bold)
         Column(verticalArrangement = Arrangement.spacedBy(5.dp)) {
-            TextField(
+            OutlinedTextField(
                 value = email.value,
                 maxLines = 1,
                 onValueChange = { email.value = it },
                 modifier = Modifier.fillMaxWidth(),
                 label = { Text(text = "Email") }
             )
-            TextField(
+            OutlinedTextField(
                 value = password.value,
                 maxLines = 1,
                 onValueChange = { password.value = it },
